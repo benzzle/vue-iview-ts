@@ -1,0 +1,9 @@
+{
+  "plugins": [
+    //当局部引用iview的时候放开下面的注释，使用局部引用。
+    // ["import", {
+    //   "libraryName": "iview",
+    //   "libraryDirectory": "src/components"
+    // }]
+  ]
+}
