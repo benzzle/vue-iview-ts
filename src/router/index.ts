@@ -10,7 +10,7 @@ const { homeName } = config
 Vue.use(Router)
 const router = new Router({
   routes,
-  mode: 'history'
+  mode: 'hash'
 })
 const LOGIN_PAGE_NAME = 'login'
 
@@ -39,10 +39,14 @@ router.beforeEach((to, from, next) => {
     if (store.state.user.hasGetInfo) {
       turnTo(to, store.state.user.access, next)
     } else {
+      console.log("获取用户信息")
       store.dispatch('user/getUserInfo').then(user => {
+        console.log("请求一下获取用户信息-----成功")
+        console.log(user)
         // 拉取用户信息，通过用户权限和跳转的页面的name来判断是否有权限访问;access必须是一个数组，如：['super_admin'] ['super_admin', 'admin']
         turnTo(to, user.access, next)
       }).catch(() => {
+        console.log("请求一下获取用户信息-----失败")
         setToken('')
         next({
           name: 'login'

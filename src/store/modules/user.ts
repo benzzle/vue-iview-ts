@@ -87,7 +87,13 @@ export default {
           commit('setUserId', 'UserId')
           commit('setAccess', ['super_admin', 'admin'])
           commit('setHasGetInfo', true)
-          resolve();
+          resolve({
+            name: 'admin',
+            user_id: '2',
+            access: ['admin'],
+            token: 'admin',
+            avator: 'https://avatars0.githubusercontent.com/u/20942571?s=460&v=4'
+          });
         } catch (error) {
           reject(error)
         }

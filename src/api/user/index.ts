@@ -12,12 +12,6 @@ export const login = ({ userName, password }:any) => {
   },1000)
 }
 
-export const getUserInfo = (token:string) => {
-  
-    return new Promise( (resolve:any,reject:any) => {
-      resolve()
-    });
-}
 
 export const logout = (token:string) => {
   setTimeout( () => {
