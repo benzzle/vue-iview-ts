@@ -72,7 +72,8 @@ export default [
         name: 'level_2_1',
         meta: {
           icon: 'md-funnel',
-          title: '二级-1'
+          title: '二级-1',
+          beforeCloseName: "before_close_normal"
         },
         component: () => import('@/views/multilevel/level-2-1.vue')
       },

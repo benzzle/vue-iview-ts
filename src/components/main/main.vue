@@ -41,8 +41,8 @@ import Fullscreen from './components/fullscreen'
 import ErrorStore from './components/error-store'
 import { mapMutations, mapActions, mapGetters } from 'vuex'
 import { getNewTagList, getNextRoute, routeEqual } from '@/libs/util'
-import minLogo from '@/assets/images/logo-min.jpg'
-import maxLogo from '@/assets/images/logo.jpg'
+import minLogo from '@/assets/images/logo-min.png'
+import maxLogo from '@/assets/images/logo.png'
 import './main.less'
 export default {
   name: 'Main',
@@ -80,9 +80,6 @@ export default {
     },
     menuList () {
       return this.$store.getters.menuList
-    },
-    local () {
-      return this.$store.state.app.local
     },
     hasReadErrorPage () {
       return this.$store.state.app.hasReadErrorPage

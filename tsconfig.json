@@ -1,5 +1,5 @@
 {
-  "compilerOptions": {
+  "compilerOptions": { 
     "allowJs": true,
     "target": "esnext",
     "module": "esnext",
@@ -35,9 +35,12 @@
     "tests/**/*.tsx", 
     "src/libs/util.ts", 
     "src/router/index.ts", 
-    "src/router/routers.ts", "src/store/modules/user.ts", "src/store/modules/app.js"
+    "src/router/routers.ts",
+    "src/store/modules/user.ts", 
+    "src/store/modules/app.js"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "dist" 
   ]
 }
